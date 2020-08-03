@@ -116,11 +116,11 @@ model = build_model(input_shape=(64,64,3), output_size=43)
 epochs = 10
 batch_size = 16
 
-#model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size,
-#                               validation_data=(X_val, y_val))
+model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size,
+                               validation_data=(X_val, y_val))
 
-#model.save("traffic_sign_model.h5")
-model = keras.models.load_model("traffic_sign_model.h5")
+model.save("traffic_sign_model.h5")
+#model = keras.models.load_model("traffic_sign_model.h5")
 
 # Kiểm tra model với dữ liệu mới
 print(model.evaluate(X_test, y_test))
